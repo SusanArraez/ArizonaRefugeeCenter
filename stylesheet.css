@@ -93,6 +93,7 @@ table {
     text-decoration:none;
     box-shadow:var(--shadow);
 }
+/* -----Global Styles (mobile first)-------------- */
 
 /* ---------- Navigation (mobile-first) ---------- */
 nav h2{
@@ -104,7 +105,7 @@ nav {
     overflow: hidden;
     background-color: var(--navy);
     position: relative;
-    padding: 10px 16px 35px 16px;
+    padding: 10px 16px 0px 16px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -123,8 +124,8 @@ nav {
 }
 
 /* Style the hamburger menu */
-.topnav a.icon { */
-    background: var(--navy);
+.topnav a.icon {
+    background:var(--navy);
     display: flex;
     position: absolute;
     right: -9px;
@@ -145,10 +146,14 @@ nav {
 }
 
 #header-actions {
+    background: var(--navy);
     display: flex;
     justify-content: center; /* centers horizontally */
     gap: 50px; 
-    padding: 16px 0px 0px 0px; /* space between the buttons */
+    padding: 18px 16px;  /* space between the buttons */
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 
 #header-actions a {
