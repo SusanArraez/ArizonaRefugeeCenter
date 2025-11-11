@@ -145,7 +145,11 @@ img, iframe, video, embed{
 h1, h2{
     color: var(--dark-orange);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 900;
+}
+p{
+    line-height: 140.7%;
+    color: var(--navy);
 }
 /* ---------- Navigation (mobile-first) ---------- */
 nav h2{ 
@@ -254,18 +258,61 @@ nav {
     display: block;
     width: calc(100% + 1.3px);
     height: 148px;
+    z-index: 1;
 }
 
 .header-curve .shape-fill {
-    fill: var(--light-orange);
+    fill: var(--tan);
 }
 
 /** For mobile devices **/
 @media (max-width: 767px) {
     .header-curve svg {
         width: calc(100% + 1.3px);
-        height: 83px;
+        height: 45px;
     }
+}
+header{
+    padding: 24px 18px 62px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1{
+    text-align:center;
+}
+
+header p{
+    text-align: center;
+    padding: 19px 0px 42px 0px;
+}
+header a{
+    position: relative;
+    top: -29px;
+    left: 0px;
+}
+header img{
+    z-index: 2;
+}
+.offer-curve {
+    position: relative;
+    top: -2px;
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.offer-curve svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 61px;
+}
+
+.offer-curve .shape-fill {
+    fill: var(--tan);
 }
 
 /* --- */
