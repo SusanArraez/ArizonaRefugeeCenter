@@ -61,6 +61,7 @@ table {
     --tan: #EED5B6;
     --cream: #FDF3E5;
     --planet-green: #586054;
+    --brown: #765433;
     --black: #222222;
     --white: #ffffff;
     font-family: "Nunito Sans", sans-serif;
@@ -167,12 +168,16 @@ nav {
     display: none; 
 } 
 /* Style navigation menu links */ 
+.home-logo{
+    width:fit-content;
+    margin: auto; 
+}
 .topnav a { 
     color: var(--white); 
     padding: 14px 16px; 
     text-decoration: none; 
     font-size: 17px; 
-    display: block; 
+    display: block;
     text-align: center; 
 }
  /* Style the hamburger menu */ 
@@ -273,7 +278,7 @@ nav {
     }
 }
 header{
-    padding: 24px 18px 62px 18px;
+    padding: 24px 22px 62px 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,13 +297,34 @@ header a{
     top: -29px;
     left: 0px;
 }
+#headersun1{
+    border: none;
+    width: 100%;
+    max-width: 5.5rem;
+    position: absolute;
+    top: 255px;
+    left: 267px;
+    transform: rotate(-13deg);
+    z-index: 3;
+}
+#headersun2{
+    border: none;
+    width: 100%;
+    max-width: 10.5rem;
+    position: absolute;
+    top: 436px;
+    left: -8px;
+    transform: rotate(5deg);
+    z-index: 3;
+}
 header img{
     z-index: 2;
-    
-    width: 100%;
-    max-width: 585px;
+    border: 12px solid var(--brown);
+    border-radius: 3rem;
+    width: 87%;
+    max-width: 585.73px;
     height: auto;
-
+    transform: rotate(10deg);
 }
 .offer-curve {
     position: relative;
