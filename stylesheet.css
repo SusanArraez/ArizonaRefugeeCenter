@@ -346,4 +346,26 @@ header img{
     fill: var(--tan);
 }
 
-/* --- */
+/* ---Section What we Offer---- */
+.offer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer-job-ready{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--planet-green);
+    padding: 2rem 1rem;
+    border-radius: 3rem;
+}
+.offer-job-ready p{
+    text-align: center;
+    color: var(--cream);
+    padding: 1rem 1rem;
+}
+.offer-job-ready img{
+    border-radius: 3rem;
+}
