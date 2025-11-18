@@ -96,7 +96,6 @@ html, body {
     box-sizing: border-box; /* makes width calculations predictable */
     margin: 0;
     padding: 0;
-    overflow-x: hidden;     /* hides horizontal overflow (use last-resort) */
     overflow-y: visible;
 }
 body{
@@ -353,20 +352,28 @@ header img{
 }
 
 /* ---Section Our Services---- */
-.services{
-    display: flex;
-    flex-direction: column;
+
+.section-title{
+    background-color: var(--white);
+    display: block;
+    padding: 4rem 1rem;
+
 }
 
 .service-options{
     background-color: var(--navy);
-    padding: px 0px;
-}
-.section-title{
-    background-color: var(--white);
-    display: block;
     padding: 4rem 3rem;
-
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    gap: 1.5rem;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.service-options ::-webkit-scrollbar{
+    display: none;
 }
 
 .service-options > section{
@@ -375,9 +382,9 @@ header img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 4rem 3rem;
 }
-.culture-adapt p{
+.service-options > section > p{
     text-align: center;
     color: var(--cream);
     padding: 1rem 1rem;
