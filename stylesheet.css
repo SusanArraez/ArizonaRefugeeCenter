@@ -57,20 +57,17 @@ table {
     --navy: #272F40;
     --dark-orange: #C95127;
     --accent-dark: #b74a20;
-    --light-orange: #F8BA75;
-    --tan: #EED5B6;
     --cream: #FDF3E5;
-    --planet-green: #586054;
+    --light-orange: #F8BA75;
+    --yellow: #FFC400;
     --brown: #765433;
     --black: #222222;
     --white: #ffffff;
     font-family: "Nunito Sans", sans-serif;
-    --max-width: 1100px;
     --radius: 12px;
     --gap: 1.15rem;
     --shadow: 0 6px 18px rgba(34,34,34,0.08);
     --transition: 200ms ease-in-out;
-    --mobile-break: 820px;
 }
 
 /* Skip to content (visible on focus) */
@@ -124,7 +121,8 @@ header {
     grid-row: 3;
     grid-column: 1/-1;          
     position: relative;
-    background-color: var(--cream);      /* keep header-curve svg absolute inside header */
+    background-color: var(--cream);
+     /* keep header-curve svg absolute inside header */
 }
 /* header-actions directly under header */
 #header-actions {
@@ -143,15 +141,39 @@ img, iframe, video, embed{
     max-width: 100%;
     height: auto;
 }
-h1, h2{
+h1{
+    font-family: "Nunito Sans", sans-serif;
     color: var(--dark-orange);
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-size: 2.75rem;
+    font-weight: 650;
+}
+h2{
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--dark-orange);
+    font-size: 2rem;
+    font-weight: 650;
+}
+h3{
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--navy);
+    font-size: 1.25rem;
+    font-weight: 650;  
+}
+h4{
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--cream);
+    font-size: 1.688rem;
+    font-weight: 850;  
 }
 p{
-    line-height: 140.7%;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.125rem;
+    line-height: 140%;
     color: var(--navy);
+    line-height: 168%;
+    font-weight: 550;
 }
+
 /* ---------- Navigation (mobile-first) ---------- */
 nav h2{ 
     visibility: hidden; 
@@ -206,21 +228,23 @@ nav {
     gap: 30px; 
     padding: 18px 0px;
     position: sticky;
+    top: 0;
     z-index: 1001;
-    top: 0; 
     overflow: hidden; 
 } 
 #header-actions a { 
-    text-align: center; 
+    text-align: center;
+    letter-spacing: 0.10rem; 
 }
+
 
 /* ---------- Buttons ---------- */
 .btn{
     display:inline-block;
-    padding:.6rem .9rem;
+    padding:.6rem 1.5rem;
     text-decoration:none;
-    font-weight:700;
-    letter-spacing:.03em;
+    font-weight:600;
+    letter-spacing:.1rem;
     transition:all var(--transition);
     border:none;
     cursor:pointer;
@@ -228,7 +252,7 @@ nav {
 .btn-primary{
     background:var(--dark-orange);
     color:var(--white);
-    box-shadow:0 6px 14px rgba(217,96,42,0.14);
+    box-shadow:0 6px 14px var(--black);
 }
 .btn-primary:hover{ 
     background:var(--accent-dark);
@@ -237,7 +261,8 @@ nav {
 .btn-outline{
     background:transparent;
     color:var(--white);
-    border:2px solid var(--white);
+    border:3px solid var(--white);
+    box-shadow:0 6px 14px var(--black);
 }
 .btn:focus{
     outline:3px solid var(--accent-dark);
@@ -267,7 +292,7 @@ nav {
 }
 
 .header-curve .shape-fill {
-    fill: var(--tan);
+    fill: var(--white);
 }
 
 /** For mobile devices **/
@@ -278,7 +303,7 @@ nav {
     }
 }
 header{
-    padding: 24px 22px 62px 22px;
+    padding: 25px 24px 172px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -294,8 +319,9 @@ header p{
 }
 header a{
     position: relative;
-    top: -29px;
+    top: -15px;
     left: 0px;
+    margin-bottom: 2rem;
 }
 #headersun1{
     border: none;
@@ -321,51 +347,41 @@ header img{
     z-index: 2;
     border: 12px solid var(--brown);
     border-radius: 3rem;
-    width: 87%;
+    width: 100%;
     max-width: 585.73px;
     height: auto;
-    transform: rotate(10deg);
-}
-.offer-curve {
-    position: relative;
-    top: -2px;
-    left: 0px;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
 }
 
-.offer-curve svg {
-    position: relative;
+/* ---Section Our Services---- */
+.services{
+    display: flex;
+    flex-direction: column;
+}
+
+.service-options{
+    background-color: var(--navy);
+    padding: px 0px;
+}
+.section-title{
+    background-color: var(--white);
     display: block;
-    width: calc(111% + 1.3px);
-    height: 61px;
+    padding: 4rem 3rem;
+
 }
 
-.offer-curve .shape-fill {
-    fill: var(--tan);
-}
-
-/* ---Section What we Offer---- */
-.offer{
+.service-options > section{
+    background-color: transparent;
+    border: 3px solid var(--cream);
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.offer-job-ready{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--planet-green);
     padding: 2rem 1rem;
-    border-radius: 3rem;
 }
-.offer-job-ready p{
+.culture-adapt p{
     text-align: center;
     color: var(--cream);
     padding: 1rem 1rem;
 }
-.offer-job-ready img{
-    border-radius: 2rem;
+.culture-adapt img{
+    color: #FDF3E5;
 }
