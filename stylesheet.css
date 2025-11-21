@@ -311,6 +311,9 @@ header{
     flex-direction: column;
     align-items: center;
 }
+.mobile-hdr{
+    display: contents;
+}
 
 header p{
     text-align: center;
@@ -708,7 +711,7 @@ footer p{
         display: flex;
         align-items: flex-end;
     }
-    header div{
+    .mobile-hdr{
         display: grid;
         justify-items: start;
     }
@@ -722,7 +725,7 @@ footer p{
         padding-top: 2rem;
         font-weight: 700;
     }
-    .header-img{
+    #header-img{
         position: relative;
     }
     /* ------------Our Service------ */
