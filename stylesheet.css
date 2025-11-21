@@ -151,6 +151,7 @@ h1{
     color: var(--dark-orange);
     font-size: 2.5rem;
     font-weight: 650;
+    text-align: center;
 }
 h2{
     font-family: "Nunito Sans", sans-serif;
@@ -309,10 +310,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-header h1{
-    text-align:center;
 }
 
 header p{
@@ -704,5 +701,37 @@ footer p{
     font-weight: 250;
     text-align: center;
     padding: 2rem 1rem .5rem 1rem;
+}
+/* ---------------------------Medium Screens-------------------------- */
+@media screen and (min-width: 834px){
+    header{
+        display: flex;
+        align-items: flex-end;
+    }
+    header div{
+        display: grid;
+        justify-items: start;
+    }
+    header p{
+        text-align:left;
+        font-size: 18px;
+    }
+    h1{
+        font-size: 55px;
+        text-align: left;
+        padding-top: 2rem;
+        font-weight: 700;
+    }
+    .header-img{
+        position: relative;
+    }
+    /* ------------Our Service------ */
+    .section-title{
+        text-align: center;
+    }
+    .service-options{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
