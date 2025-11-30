@@ -553,7 +553,6 @@ form{
     background-color: var(--navy);
     border-radius: 6%;
     padding: 1rem;
-
     justify-items: center;
 }
 input, label, fieldset, textarea{
