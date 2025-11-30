@@ -92,9 +92,9 @@ table {
     box-shadow:var(--shadow);
 }
 /* -----Global Styles (mobile first)-------------- */
-* {
+/* * {
     outline: 1px solid red;
-}
+} */
 
 html, body {
     box-sizing: border-box; /* makes width calculations predictable */
@@ -306,7 +306,7 @@ nav {
     }
 }
 header{
-    padding: 25px 24px 172px 24px;
+    padding: 25px 24px 46px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -319,26 +319,17 @@ header p{
     text-align: center;
     padding: 19px 0px 42px 0px;
 }
-.heartsx2{
-    display: grid;
-    position: relative;
-    top: 6px;
-    right: -18px;
-    transform: rotate(-24deg);
-}
+
 .heart1{
     border: none;
     width: 100%;
     max-width: 2.5rem;
     border-radius: 0%;
 }
-.heart2{
-    border: none;
-    width: 100%;
-    max-width: 1.5rem;
-    position: relative;
-    left: -20px;
-    border-radius: 0%;
+
+#decor-hdr-hrts1{
+    display: grid;
+    grid-template-columns: auto 43px;
 }
 header a{
     position: relative;
@@ -349,27 +340,34 @@ header a{
 header h1{
     padding-left: 43px;;
 }
+#decor-hdr-img-sun{
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 20px 16px auto 2px;
+}
+#heart1{
+    border: none;
+    width: 10%;
+    position: relative;
+    top: -35px;
+    left: -125px;
+    border-radius: 0%;
+
+}
 #headersun1, #headersun2 {
     border: none;
-    position: absolute;
-    top: 36%;
-    transform: translateX(-50%) rotate(-13deg);
-    width: clamp(48px, 12vw, 120px); /* scales between 48px and 120px */
+    position: relative;
+    top: -15px;
+    width: 26%;
     z-index: 3;
-    left: 86%;
+    left: 166px;
+}
+#headersun2 {
+    left: -145px;
+    top: -34px;
+    width: 22%;
 }
 
-/* if headersun2 needs a different rotation/placement */
-#headersun2 {
-    transform: translateX(-50%) rotate(5deg);
-    left: 14%;
-    top: 76%;
-    width: clamp(40px, 10vw, 137px);
-}
-#decor-hdr-hrts1{
-    display: grid;
-    grid-template-columns: auto 43px;
-}
 header img{
     z-index: 2;
     border: 12px solid var(--brown);
@@ -378,14 +376,30 @@ header img{
     max-width: 585.73px;
     height: auto;
 }
-
+#decor-hdr-hrts3{
+    border: none;
+    border-radius: 0%;
+    width: 16%;
+    position: relative;
+    left: 134px;
+    top: 47px;
+}
 /* ---Section Our Services---- */
 
 .section-title{
     background-color: var(--white);
-    display: block;
     padding: 4rem 1.563rem;
-
+    display: grid;
+}
+#service-sun1{
+    position: relative;
+    left:0px ;
+    top:-8px;
+}
+#service-sun2{
+    position: relative;
+    left: 306px;
+    top: 8px;
 }
 
 .service-options{ /*--------carousel scroll effect--------*/
@@ -432,6 +446,16 @@ header img{
 
 
 /* ----------Our Impact Section------------ */
+#impact-title{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 94px auto 70px;
+    justify-items: center;
+    align-items: center;
+}
+#impact-title img{
+    width: 100%;
+}
 .our-impact{
     padding: 4rem 1.563rem;
     display: flex;
@@ -720,10 +744,6 @@ footer p{
     header{
         display: flex;
         align-items: flex-end;
-    }
-    .mobile-hdr{
-        display: grid;
-        justify-items: start;
     }
     header p{
         text-align:left;
