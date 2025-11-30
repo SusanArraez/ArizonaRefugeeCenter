@@ -457,17 +457,33 @@ header img{
     width: 100%;
 }
 .our-impact{
-    padding: 4rem 1.563rem;
+    padding: 2rem 1.563rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    background-image: url(images/graphics/Rectangle_yellow.svg);
+    background-size: 531px auto;
+    background-repeat: repeat-x;
+    background-position: 50% 97%;
 }
 .our-impact img{
     border-radius: 15%;
 }
+#impact-img-decor{
+    display: grid;
+}
+#impactSun{
+    position: relative;
+    width: 16%;
+    top: 26px;
+    left: 303px;
+}
+#impactHearts{
+    width: 21%;
+}
 .stats{
-    background-image: url(images/graphics/drawn_bkgrnd.svg);
+    background-image: url(images/graphics/drawn_bkgrnd2.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -476,8 +492,22 @@ header img{
     justify-content: space-evenly;
     align-items: center;
     gap: 3rem;
-    padding: 5rem;
+    padding: 0rem 3rem;
 
+}
+#wowTop{
+    position: relative;
+    top: 12px;
+    left: 105px;
+}
+#wowBtm{
+    position: relative;
+    top: -43px;
+    left: -137px;
+}
+.stats div{
+    display: grid;
+    justify-items: center;
 }
 .stats-num{
     font-family: "Nunito Sans", sans-serif;
@@ -489,26 +519,41 @@ header img{
 .stats p{
     font-family: "Nunito Sans", sans-serif;
     color: var(--navy);
-    font-size: 1.313rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     font-weight: 750;
     padding-bottom: 1rem;
+}
+#impactYellow{
+    position: relative;
 }
 /* ------------Contact us Section------------ */
 #contact-us{
     padding: 0rem 1rem 0rem 1rem;
 }
-#contact-us h2, #contact-us p{
+#contactTitle{
+    display: grid;
+    grid-template-columns: 59px auto 59px;
+    justify-items: center;
+}
+#mail-icon{
+    position: relative;
+    top: -15px;
+    left: -45px;
+    rotate: 25deg;
+    grid-column: 3;
+}
+#contactTitle h2, #contact-us p{
     text-align: center;
-}
-#contact-us p{
     padding-bottom: 1rem;
+    grid-column: 2;
 }
+
 form{
     background-color: var(--navy);
     border-radius: 6%;
     padding: 1rem;
-    display: grid;
+
     justify-items: center;
 }
 input, label, fieldset, textarea{
