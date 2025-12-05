@@ -63,10 +63,7 @@ table {
     --brown: #765433;
     --black: #222222;
     --white: #ffffff;
-    font-family: "Nunito Sans", sans-serif;
-    --radius: 12px;
-    --gap: 1.15rem;
-    --shadow: 0 6px 18px rgba(34,34,34,0.08);
+    --font-family: "Nunito Sans", sans-serif;
     --transition: 200ms ease-in-out;
 }
 
@@ -89,7 +86,6 @@ table {
     border-radius:6px;
     z-index:9999;
     text-decoration:none;
-    box-shadow:var(--shadow);
 }
 /* -----Global Styles (mobile first)-------------- */
 /* * {
@@ -179,6 +175,9 @@ p{
     line-height: 148%;
     font-weight: 550;
 }
+a, address, label, fieldset{
+    font-family: var(--font-family);
+}
 
 /* ---------- Navigation (mobile-first) ---------- */
 nav h2{ 
@@ -255,7 +254,7 @@ nav {
 .btn-primary{
     background:var(--dark-orange);
     color:var(--white);
-    box-shadow:0 6px 14px var(--black);
+    font-family: var(--font-family);
 }
 .btn-primary:hover{ 
     background:var(--accent-dark);
@@ -265,7 +264,7 @@ nav {
     background:transparent;
     color:var(--white);
     border:3px solid var(--white);
-    box-shadow:0 6px 14px var(--black);
+    font-family: var(--font-family);
 }
 .btn:focus{
     outline:3px solid var(--accent-dark);
@@ -544,7 +543,6 @@ header img{
     grid-column: 3;
 }
 #contactTitle h2, #contact-us p{
-    text-align: center;
     padding-bottom: 1rem;
     grid-column: 2;
 }
@@ -552,7 +550,7 @@ header img{
 form{
     background-color: var(--navy);
     border-radius: 6%;
-    padding: 1rem;
+    padding: 2rem;
     justify-items: center;
 }
 input, label, fieldset, textarea{
@@ -660,6 +658,14 @@ input:error, textarea:error{
 .hidden{
     visibility: hidden;
     height: .5px;
+}
+form p{
+    color: var(--cream);
+}
+
+/* input / textarea outline when invalid */
+input.error, textarea.error {
+    outline: 5px solid var(--accent-dark);
 }
 /* ----See Us----- */
 .see-us h3{
@@ -785,22 +791,49 @@ footer p{
 }
 /* ---------------------------Medium Screens-------------------------- */
 @media screen and (min-width: 834px){
-    header{
+header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        padding-top: 85px;
+    }
+    #hero{
+        display: grid;
+        justify-items: start;
+    }
+    #hero h1{
+        font-size: 40px;
+    }
+    #hero p{
+        font-size: 18px;
+        text-align: left;
+        padding-left: 50px;
+    }
+    #hero a{
+        margin-left: 50px;
+    }
+    #decor-hdr-img-sun {
         display: flex;
+        flex-direction: column-reverse;
         align-items: flex-end;
     }
-    header p{
-        text-align:left;
-        font-size: 18px;
+    #heart1{
+        top: 95px;
+        left: -697px;
     }
-    h1{
-        font-size: 55px;
-        text-align: left;
-        padding-top: 2rem;
-        font-weight: 700;
+    #headersun1{
+        top: -15px;
+        left: -454px;
+        width: 18%;
     }
-    #header-img{
-        position: relative;
+    #headersun2 {
+    left: -38px;
+    top: 56px;
+    width: 22%;
+    }
+    #decor-hdr-hrts3{
+    left: 1087px;
+    top: 76px;
     }
     /* ------------Our Service------ */
     .section-title{
@@ -810,10 +843,146 @@ footer p{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    #service-sun1{
+    left: 293px;
+    }
+    #service-sun2 {
+        left: 586px;
+    }
+    
+    /* --------------our impact--------- */
+    .our-impact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#impact-cont{
+    grid-column: 2/-1;
+    display: grid;
+    gap: 10px;
+    justify-items: start;
+}
+#impact-title {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 106px 220px 97px;
+}
+#impact-cont p{
+    padding: 0rem 4rem 1rem 1rem;
+}
+#impact-img-decor {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+}
+.stats{
+    grid-column: 1/-1;
+    flex-direction: row;
+    background-image: url(images/graphics/drawn_bkgrnd_horizontal.svg);
+    background-size: auto 265px;
+    padding: 6rem;
+}
+#wowBtm {
+    position: relative;
+    top: -108px;
+    left: -105px;
+    rotate: 190deg;
+}
+#wowTop {
+    position: relative;
+    top: 118px;
+    left: 75px;
+    rotate: 190deg;
+}
+#footer-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 }
 /* -------Large screen 1280px---------- */
 @media screen and (min-width: 1280px){
-    
+        .mobile-nav{
+        display: flex;
+        justify-content: center;
+    }
+    .topnav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0 2rem;
+}
+
+  /* hide the hamburger icon on larger screens */
+.topnav a.icon {
+    display: none;
+}
+
+  /* show links inline */
+.topnav #myLinks {
+    display: flex; 
+    gap: 1.25rem;
+    align-items: center;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+  /* each link is inline and inherits existing link styles */
+.topnav #myLinks > div {  
+    display: block;
+}
+.topnav #myLinks a {
+    display: inline-block;
+    padding: 0.5rem 0.25rem;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    transition: color var(--transition), transform var(--transition);
+}
+.topnav #myLinks a:hover,
+.topnav #myLinks a:focus {
+    text-decoration: solid var(--light-orange);
+    transform: translateY(-2px);
+}
+
+  /* keep the logo visible and aligned left */
+.home-logo {
+    margin: 0;
+    order: 1;
+}
+
+  /* place nav links after the logo */
+.topnav #myLinks {
+    order: 2;
+}
+
+  /* header actions (Donate / Volunteer) appear on the right */
+#header-actions {
+    width: fit-content;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 1rem; 
+    background: transparent;
+    justify-content: flex-end;
+}
+
+
+#header-actions .btn {
+    /* padding: 0.5rem 0.9rem; */
+    box-shadow: none;
+}
+
+  /* if #myLinks is toggled open class on mobile, ensure it doesn't interfere on desktop */
+.topnav #myLinks.open {
+    display: flex !important;
+}
     header{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -875,45 +1044,7 @@ footer p{
 
 }
 /* ------Our Impact----- */
-.our-impact{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-#impact-cont{
-    grid-column: 2/-1;
-    display: grid;
-    gap: 10px;
-    justify-items: start;
-}
-#impact-title {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 106px 220px 97px;
-}
-#impact-img-decor {
-    grid-column: 1;
-    grid-row: 1;
-    justify-content: center;
-}
-.stats{
-    grid-column: 1/-1;
-    flex-direction: row;
-    background-image: url(images/graphics/drawn_bkgrnd_horizontal.svg);
-    background-size: auto 265px;
-    padding: 6rem;
-}
-#wowBtm {
-    position: relative;
-    top: -108px;
-    left: -105px;
-    rotate: 190deg;
-}
-#wowTop {
-    position: relative;
-    top: 118px;
-    left: 75px;
-    rotate: 190deg;
-}
+/* same as medium screens :P */
 /* -----------Contact us---------- */
 #contact-us{
     display: grid;
@@ -922,9 +1053,29 @@ footer p{
 #contactTitle{
     grid-column: 1/-1;
 }
+#contactTitle p{
+    padding: 0 10rem;
+    text-align: center;
+}
+#mail-icon{
+    top:19px;
+    left: 98px;
+    grid-column: 1;
+    width: 100%;
+}
 form{
     grid-row: 2;
     margin: 2rem;
+}
+.see-us h3{
+    padding: 0;
+}
+.see-us p{
+    padding-right: 8rem;
+    text-align: left;
+}
+.hrs p{
+    padding: 0;
 }
 #footer-footer{
     display: grid;
